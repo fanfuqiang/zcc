@@ -9,7 +9,7 @@ Copyright (C) 2013
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
-#include <malloc.h>
+//#include <malloc.h>
 #include <string.h>
 #include <time.h>
 #include <ctype.h>
