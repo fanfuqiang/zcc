@@ -1,6 +1,20 @@
-OBJS	= driver.o alloc.o decl.o error.o expr.o gas.o icode.o\
-			infer.o lex.o opt.o reg.o stmt.o string.o symbol.o\
-			type.o utils.o zbuf.o
+OBJS	=	./src/driver.o\
+		./src/alloc.o\
+		./src/decl.o\
+		./src/error.o\
+		./src/expr.o\
+		./src/gas.o\
+		./src/icode.o\
+		./src/infer.o\
+		./src/lex.o\
+		./src/opt.o\
+		./src/reg.o\
+		./src/stmt.o\
+		./src/string.o\
+		./src/symbol.o\
+		./src/type.o\
+		./src/utils.o\
+		./src/zbuf.o
 
 CC		= gcc
 
@@ -11,4 +25,4 @@ $(OBJS): %.o: %.c
 	$(CC) -c -g $< -o $@
 
 clean:
-	rm -f *.o
+	rm -f $(OBJS)
