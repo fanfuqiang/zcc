@@ -11,16 +11,15 @@ Copyright (C) 2013
 ---------------------------------------------------------------------------===*/
 static int eval_size(char *format, va_list args) {
 	char *p = format;
-	va_list vp = args;
 	int size = strlen(p);
 
 	while (*p) {
 		if (*p++ == '%') {
 			if (*p == 'd') {
 				size += 20;		/* the size of INT_MIN is less than 20*/
-				va_arg(vp, int);
+				va_arg(args, int);
 			} else if (*p == 's')
-				size += strlen(va_arg(vp, char *));
+				size += strlen(va_arg(args, char *));
 			//else
 				//assert(0);
 		}

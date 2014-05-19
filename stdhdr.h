@@ -9,7 +9,11 @@ Copyright (C) 2013
 #include <stdio.h>
 #include <assert.h>
 #include <stdlib.h>
-#include <malloc.h>
+
+#ifndef __APPLE__
+  #include <malloc.h>
+#endif
+
 #include <string.h>
 #include <time.h>
 #include <ctype.h>
