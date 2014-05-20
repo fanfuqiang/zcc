@@ -2,6 +2,7 @@ zcc
 ===
 
 a c89 compiler, need total test.
+finally, this is a working project.
 
 
 TODO
