@@ -192,6 +192,8 @@ int is_compatiable(type *ty1, type *ty2) {
 			if (ty1->sym->name == ty2->sym->name
 				&& ty1->sym->scope == ty2->sym->scope)
 				return 1;
+			else
+				return 0;
 		case CAT_ARRAY:
 			/* if one array is unknown size*/
 			if (ty1->size == 0 || ty2->size == 0 || ty1->size == ty2->size)
@@ -242,6 +244,8 @@ int is_cpt_no_qual(type *ty1, type *ty2) {
 			if (ty1->sym->name == ty2->sym->name
 				&& ty1->sym->scope == ty2->sym->scope)
 				return 1;
+			else
+				return 0;
 		case CAT_ARRAY:
 			/* if one array is unknown size*/
 			if (ty1->size == 0 || ty2->size == 0 || ty1->size == ty2->size)
