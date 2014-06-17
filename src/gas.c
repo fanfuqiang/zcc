@@ -181,7 +181,7 @@ static char *gas_op_f64(symbol *s, int offset) {
 		return gas_op_f64(s->reg, offset);
 	} else {
 		assert(s->ebp_off);
-		sprintf(buffer_128, "-%d(%ebp)", s->ebp_off - offset);
+		sprintf(buffer_128, "-%%d(%%ebp)", s->ebp_off - offset);
 		return buffer_128;
 	}
 }
